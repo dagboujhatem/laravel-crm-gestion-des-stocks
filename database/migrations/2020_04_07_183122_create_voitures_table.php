@@ -15,16 +15,16 @@ class CreateVoituresTable extends Migration
     {
         Schema::create('voitures', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('zone');
-            $table->string('brigade');
-            $table->string('poste');
-            $table->string('type');
-            $table->string('numero');
-            $table->string('date-d-affectation');
-            $table->string('etat');
-            $table->string('date-de-panne');
-            $table->string('place-de-reparation');
-            $table->string('remarque');
+            $table->string('zone')->nullable();
+            $table->string('brigade')->nullable();
+            $table->string('poste')->nullable();
+            $table->string('type')->nullable();
+            $table->string('numero')->nullable();
+            $table->string('date-d-affectation')->nullable();
+            $table->string('etat')->nullable();
+            $table->string('date-de-panne')->nullable();
+            $table->string('place-de-reparation')->nullable();
+            $table->string('remarque')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -48,11 +48,16 @@ class VoitureDataTable extends DataTable
                 'stateSave' => true,
                 'order'     => [[0, 'desc']],
                 'buttons'   => [
-                    ['extend' => 'create', 'className' => 'btn btn-default btn-sm no-corner',],
-                    ['extend' => 'export', 'className' => 'btn btn-default btn-sm no-corner',],
-                    ['extend' => 'print', 'className' => 'btn btn-default btn-sm no-corner',],
-                    ['extend' => 'reset', 'className' => 'btn btn-default btn-sm no-corner',],
-                    ['extend' => 'reload', 'className' => 'btn btn-default btn-sm no-corner',],
+                    ['extend' => 'create', 'text'=>'<i class="fa fa-plus"></i> إضافة',
+                     'className' => 'btn btn-default btn-sm no-corner',],
+                    ['extend' => 'export', 'text'=>'<i class="fa fa-download"></i> تصدير البيانات <span class="caret"></span>',
+                    'className' => 'btn btn-default btn-sm no-corner',],
+                    ['extend' => 'print', 'text'=>'<i class="fa fa-print"></i> طباعة',
+                    'className' => 'btn btn-default btn-sm no-corner',],
+                    ['extend' => 'reset', 'text'=>'<i class="fa fa-undo"></i> إعادة التحميل', 
+                    'className' => 'btn btn-default btn-sm no-corner',],
+                    ['extend' => 'reload', 'text'=>'<i class="fa fa-refresh"></i> تحديث',
+                     'className' => 'btn btn-default btn-sm no-corner',],
                 ],
             ]);
     }
@@ -65,16 +70,16 @@ class VoitureDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'zone',
-            'brigade',
-            'poste',
-            'type',
-            'numero',
-            'date-d-affectation',
-            'etat',
-            'date-de-panne',
-            'place-de-reparation',
-            'remarque'
+            ['data' => 'zone', 'name'=> 'zone', 'title' => 'المنطقة'], 
+            ['data' => 'brigade', 'name'=> 'brigade', 'title' => 'الفرقة'], 
+            ['data' => 'poste', 'name'=> 'poste', 'title' => 'المركز'], 
+            ['data' => 'type', 'name'=> 'type', 'title' => 'المركز'], 
+            ['data' => 'numero', 'name'=> 'numero', 'title' => 'الرقم'], 
+            ['data' => 'date-d-affectation', 'name'=> 'date-d-affectation', 'title' => 'تاريخ التعيين'], 
+            ['data' => 'etat', 'name'=> 'etat', 'title' => 'الحالة'], 
+            ['data' => 'date-de-panne', 'name'=> 'date-de-panne', 'title' => 'تاريخ العطب'], 
+            ['data' => 'place-de-reparation', 'name'=> 'place-de-reparation', 'title' => 'مكان الإصلاح'], 
+            //['data' => 'remarque', 'name'=> 'remarque', 'title' => 'الملاحظات'], 
         ];
     }
 
