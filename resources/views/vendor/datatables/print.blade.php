@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="ar">
     <head>
         <title>Print Table</title>
         <meta charset="UTF-8">
@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <style>
             body {margin: 20px}
+            th {text-align: right;}
         </style>
     </head>
     <body>

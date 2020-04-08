@@ -4,7 +4,7 @@
     <section class="content-header">
         <h1 class="pull-left">
            <a class="btn btn-primary pull-left" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('voitures.create') }}"> 
-           <i class="fa fa-plus"></i> إضافة سيارة جديدة </a>
+           <i class="fa fa-plus"></i> {{  Lang::get('voiture.addNew') }} </a>
         </h1>
     </section>
     <div class="content">
