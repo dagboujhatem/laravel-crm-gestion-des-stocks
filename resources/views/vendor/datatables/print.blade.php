@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
     <head>
-        <title>Print Table</title>
+        <title></title>
         <meta charset="UTF-8">
         <meta name=description content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,5 +34,13 @@
                 </tr>
             @endforeach
         </table>
+
+        <script>
+            window.print();
+            setTimeout(function () {
+                window.close();
+            }, 500);
+        </script>
+
     </body>
 </html>

@@ -42,7 +42,8 @@ class VoitureDataTable extends DataTable
         return $this->builder()
             ->columns($this->getColumns())
             ->minifiedAjax()
-            ->addAction(['width' => '120px', 'printable' => false, 'class' => 'text-left'])
+            ->addAction(['title' => __('common.actionHeaderTitle') ,
+             'width' => '120px', 'printable' => false, 'class' => 'text-center'])
             ->parameters([
                 'dom'       => 'Bfrtip',
                 'stateSave' => true,

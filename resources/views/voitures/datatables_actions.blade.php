@@ -5,7 +5,7 @@
     {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', [
         'type' => 'submit',
         'class' => 'btn btn-danger btn-sm btn-submit',
-        'onclick' => "return confirm( @lang('common.deleteConfirmMessage'))"
+        'onclick' => "return confirm('هل أنت متأكد من أنك تريد الاستمرار في الحذف؟')"
     ]) !!}
 
     <a href="{{ route('voitures.show', $id) }}" class='btn btn-info btn-sm'>

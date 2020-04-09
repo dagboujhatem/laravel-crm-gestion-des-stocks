@@ -28,4 +28,11 @@ return [
     'date-de-panne' => 'تاريخ العطب',
     'place-de-reparation' => 'مكان الإصلاح',
     'remarque' => 'الملاحظات',
+
+    // controllers messages (CRUD messages)
+    'storeSussessMessage'=> 'تم حفظ السيارة بنجاح.',
+    'updateSussessMessage'=> 'تم تحديث السيارة بنجاح.',
+    'destroySussessMessage'=> 'تم حذف السيارة بنجاح.',
+    'notFoundErrorMessage'=> 'السيارة غير موجودة.'
+
 ];

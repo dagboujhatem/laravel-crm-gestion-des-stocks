@@ -2,8 +2,15 @@
 
 return [
 
+    // added Tempalte
     'save' => 'حفظ',
     'cancel' => 'إلغاء',
+
+    // show Template
+    'created_at' => 'تمت الإضافة في يوم',
+    'updated_at' => 'تم التحديث في يوم',
+    'back' => 'العودة',
+    
 
     // laravel datatable buttons 
 
@@ -14,6 +21,7 @@ return [
     'reload' => 'تحديث', 
 
     // laravel datatable actions 
+    'actionHeaderTitle'=> 'اﻻجراءات',
     'deleteConfirmMessage' => 'هل أنت متأكد من أنك تريد الاستمرار في الحذف؟', 
 
 ];

@@ -61,9 +61,11 @@
 </div>
 
 <!-- Submit Field -->
-<div class="form-group col-sm-12">
-    {!! Form::submit(__('common.save'), ['class' => 'btn btn-success']) !!}
-    <a href="{{ route('voitures.index') }}" class="btn btn-default">
-    {{  __('common.cancel') }}
+<div class="form-group col-sm-12"> 
+    <button type="submit" class="btn btn-success">
+        <i class="fa fa-save"></i> {{  __('common.save') }}
+    </button>
+    <a href="{{ route('voitures.index') }}" class="btn btn-primary">
+        <i class="fa fa-chevron-right"></i> {{  __('common.cancel') }}
     </a>
 </div>

@@ -55,7 +55,7 @@ class VoitureController extends AppBaseController
 
         $voiture = $this->voitureRepository->create($input);
 
-        Flash::success('Voiture saved successfully.');
+        Flash::success(__('voiture.storeSussessMessage'));
 
         return redirect(route('voitures.index'));
     }
@@ -72,7 +72,7 @@ class VoitureController extends AppBaseController
         $voiture = $this->voitureRepository->find($id);
 
         if (empty($voiture)) {
-            Flash::error('Voiture not found');
+            Flash::error(__('voiture.notFoundErrorMessage'));
 
             return redirect(route('voitures.index'));
         }
@@ -92,7 +92,7 @@ class VoitureController extends AppBaseController
         $voiture = $this->voitureRepository->find($id);
 
         if (empty($voiture)) {
-            Flash::error('Voiture not found');
+            Flash::error(__('voiture.notFoundErrorMessage'));
 
             return redirect(route('voitures.index'));
         }
@@ -113,14 +113,14 @@ class VoitureController extends AppBaseController
         $voiture = $this->voitureRepository->find($id);
 
         if (empty($voiture)) {
-            Flash::error('Voiture not found');
+            Flash::error(__('voiture.notFoundErrorMessage'));
 
             return redirect(route('voitures.index'));
         }
 
         $voiture = $this->voitureRepository->update($request->all(), $id);
 
-        Flash::success('Voiture updated successfully.');
+        Flash::success(__('voiture.updateSussessMessage'));
 
         return redirect(route('voitures.index'));
     }
@@ -137,14 +137,14 @@ class VoitureController extends AppBaseController
         $voiture = $this->voitureRepository->find($id);
 
         if (empty($voiture)) {
-            Flash::error('Voiture not found');
+            Flash::error(__('voiture.notFoundErrorMessage'));
 
             return redirect(route('voitures.index'));
         }
 
         $this->voitureRepository->delete($id);
 
-        Flash::success('Voiture deleted successfully.');
+        Flash::success(__('voiture.destroySussessMessage'));
 
         return redirect(route('voitures.index'));
     }
