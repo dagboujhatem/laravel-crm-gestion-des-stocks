@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateVoituresTable extends Migration
+class CreateJumellesTable extends Migration
 {
 
     /**
@@ -13,7 +13,7 @@ class CreateVoituresTable extends Migration
      */
     public function up()
     {
-        Schema::create('voitures', function (Blueprint $table) {
+        Schema::create('jumelles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('zone')->nullable();
             $table->string('brigade')->nullable();
@@ -22,8 +22,6 @@ class CreateVoituresTable extends Migration
             $table->string('numero')->nullable();
             $table->string('date-d-affectation')->nullable();
             $table->string('etat')->nullable();
-            $table->string('date-de-panne')->nullable();
-            $table->string('place-de-reparation')->nullable();
             $table->text('remarque')->nullable();
             $table->timestamps();
             $table->softDeletes();
@@ -37,6 +35,6 @@ class CreateVoituresTable extends Migration
      */
     public function down()
     {
-        Schema::drop('voitures');
+        Schema::drop('jumelles');
     }
 }
