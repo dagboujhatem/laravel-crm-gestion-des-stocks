@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
             //add a default user data...
             DB::table('users')->insert([
                 'name' => 'Bazi Anis',
-                'email' => 'admin@admin.com',
+                'email' => 'anisbezi1@gmail.com',
                 'password' => Hash::make('password'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),

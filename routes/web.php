@@ -29,3 +29,9 @@ Route::get('/home', 'HomeController@index')->middleware('verified');
 Route::resource('voitures', 'VoitureController');
 
 Route::resource('jumelles', 'JumelleController');
+
+Route::resource('cameras', 'CameraController');
+
+Route::resource('armes', 'ArmeController');
+
+Route::resource('groupeElectriques', 'GroupeElectriqueController');

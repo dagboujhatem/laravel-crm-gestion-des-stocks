@@ -27,8 +27,9 @@
     @yield('css')
 </head>
 
-<body class="skin-blue sidebar-mini">
+
 @if (!Auth::guest())
+<body class="skin-blue sidebar-mini">
     <div class="wrapper">
         <!-- Main Header -->
         <header class="main-header">
@@ -105,50 +106,15 @@
 
     </div>
 @else
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    InfyOm Generator
-                </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Tableau de bord</a></li>
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    <li><a href="{{ url('/login') }}">Login</a></li> 
-                </ul>
-            </div>
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="{{ url('/home') }}" class="text-primary">يرجى تسجيل الدخول!!</a>
         </div>
-    </nav>
-
-    <div id="page-content-wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    @yield('content')
-                </div>
-            </div>
-        </div>
+        <!-- /.login-box-body -->
     </div>
-    @endif
+    <!-- /.login-box -->
+@endif
 
     <!-- jQuery 3.1.1 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
